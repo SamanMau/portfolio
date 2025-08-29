@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,102 +7,174 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <header>
-    <h1>Saman Jejo - Software Developer</h1>
-    <a href="https://github.com/SamanMau" class="github-link" target="_blank">GitHub</a>
+  <a class="skip-link" href="#projects">Hoppa till projekt</a>
 
-    <div class="quick-facts">
-      <span>👨‍💻 Years of programming: <strong>4+</strong></span>
-      <span>📦 GitHub commits the last year: <strong>400+</strong></span>
-      <span>🏆 Hackathons: <strong>2</strong></span>
-      <span>🚀 High scale projects: <strong>4</strong></span>
-      <span>📚 Experience teaching software development: <strong>6 months</strong></span>
+  <header>
+    <div class="topbar">
+      <h1>Saman Jejo - Software Developer</h1>
+      <div class="topbar-actions">
+        <a href="https://github.com/SamanMau" class="github-link" target="_blank" aria-label="Öppna GitHub-profil">GitHub</a>
+        <button id="theme-toggle" class="icon-btn" aria-label="Växla tema">🌓</button>
+      </div>
+    </div>
+
+    <div class="quick-facts" id="quickFacts">
+      <span>👨‍💻 Years of programming: <strong data-count="4">0</strong>+</span>
+      <span>📦 Commits last year: <strong data-count="400">0</strong>+</span>
+      <span>🏆 Hackathons: <strong data-count="2">0</strong></span>
+      <span>🚀 High scale projects: <strong data-count="4">0</strong></span>
+      <span>📚 Teaching experience: <strong data-count="7">0</strong> months</span>
     </div>
   </header>
 
+  <nav class="controls" aria-label="Projektfilter">
+    <input id="search" type="search" placeholder="Sök projekt (namn, taggar, text) …" aria-label="Sök projekt" />
+    <div id="chips" class="chips">
+      <button class="chip active" data-filter="alla">Alla</button>
+      <button class="chip" data-filter="backend">Backend</button>
+      <button class="chip" data-filter="frontend">Frontend</button>
+      <button class="chip" data-filter="ai">AI</button>
+      <button class="chip" data-filter="api">API</button>
+      <button class="chip" data-filter="betalning">Betalning</button>
+      <button class="chip" data-filter="hälsa">Hälsa</button>
+      <button class="chip" data-filter="resor">Resor</button>
+      <button class="chip" data-filter="musik">Musik</button>
+      <button class="chip" data-filter="film">Film</button>
+    </div>
+  </nav>
+
   <section id="about">
     <h2>About Me</h2>
-    <p>I am a software developer with <strong>strong passion for programming and problem solving</strong>. I have experience as a <strong>team leader and product owner</strong> for several projects. Currently, I work as a <strong>teaching assistant in programming</strong> and provide IT support at the university. I have also <strong>worked on software projects on behalf of clients</strong>, giving me valuable insight into business needs and real-world problem solving.</p>
-    <p>I have a <strong>solid foundation in programming</strong> and a <strong>genuine passion for software development</strong>. I'm confident in my ability to explain complex concepts in a clear and supportive way.</p>
+    <p>I am a software developer with <strong>a strong interest in programming and problem-solving</strong>. I have been <strong>team leader and product owner</strong> in several projects and currently work as a <strong>teaching assistant in programming</strong> as well as IT support at the university. I have also <strong>built software for clients</strong>, which has given me a good understanding of business needs and real-world requirements.</p>
+    <p>I have a <strong>solid foundation in programming</strong> and am passionate about explaining complex concepts clearly.</p>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
+
     <div class="project-grid">
 
-      <div class="project">
-        <img src="pictures/pic5.png" alt="Project image for PlanTrip" />
+      <!-- PlanTrip -->
+      <article class="project" data-tags="resor,api,ai,backend,frontend">
+        <img loading="lazy" src="pictures/pic5.png" alt="Project image for PlanTrip" />
         <h3>PlanTrip (Ongoing Project)</h3>
-        <p>The application was <strong>created on behalf of a client</strong>. PlanTrip is a <strong>smart travel assistant</strong> that helps users plan trips. By integrating <strong>multiple APIs</strong>, it delivers <strong>real-time flight information</strong> and <strong>destination-based entertainment suggestions</strong>. The interface is built with <strong>responsive web technologies</strong> and focuses on <strong>clarity, usability, and delight</strong>. PlanTrip demonstrates both <strong>backend integration and frontend design skills</strong> in a real-world scenario.</p>
-        <p><strong>Tools:</strong> Java, Java Spring boot, SQL, JavaScript, HTML, CSS, Docker, Kubernetes, CI/CD pipelines.</p>
-        <p><strong>API:s used:</strong> Amadeus API, Spotify API, ChatGPT API, TMDb API</p>
-        <p><strong>Role:</strong> <strong>Product owner</strong>, backend developer, frontend developer</p>
-      </div>
+        <div class="project-body collapsed">
+          <p>The application was <strong>created on behalf of a client</strong>. PlanTrip is a <strong>smart travel assistant</strong> that helps users plan trips. By integrating <strong>multiple APIs</strong>, it delivers <strong>real-time flight information</strong> and <strong>destination-based entertainment suggestions</strong>. The interface is built with <strong>responsive web technologies</strong> and focuses on <strong>clarity, usability, and delight</strong>. PlanTrip demonstrates both <strong>backend integration and frontend design skills</strong> in a real-world scenario.</p>
+          <p><strong>Tools:</strong> Java, Java Spring boot, SQL, JavaScript, HTML, CSS, Docker, Kubernetes, CI/CD pipelines.</p>
+          <p><strong>API:s used:</strong> Amadeus API, Spotify API, ChatGPT API, TMDb API</p>
+          <p><strong>Role:</strong> <strong>Product owner</strong>, backend developer, frontend developer</p>
+        </div>
+        <div class="project-actions">
+          <button class="btn-more" aria-expanded="false">Visa mer</button>
+        </div>
+      </article>
 
-        <div class="project">
-        <img src="LaunchMate.png" alt="Project image for LaunchMate" />
+      <!-- LaunchMate -->
+      <article class="project" data-tags="startup,api,ai,backend,frontend">
+        <img loading="lazy" src="LaunchMate.png" alt="Project image for LaunchMate" />
         <h3>LaunchMate (Ongoing Project)</h3>
-        <p>The application was developed to support startups in finding the right opportunities for growth. LaunchMate is a smart startup advisor that allows businesses to input details about their operations and goals. By leveraging databases, external APIs, and AI models, it suggests funding opportunities, networking events, and strategic resources. The interface is designed with responsive web technologies and emphasizes clarity, accessibility, and actionable insights. LaunchMate highlights both backend data integration and frontend presentation skills in a real-world business context.</p>
-        <p><strong>Tools:</strong> Java, Java Spring boot, SQL, JavaScript, HTML, CSS, Docker, Kubernetes, CI/CD pipelines.</p>
-        <p><strong>Role:</strong> <strong>Product owner</strong>, backend developer, frontend developer</p>
-      </div>
+        <div class="project-body collapsed">
+          <p>The application was developed to support startups in finding the right opportunities for growth. LaunchMate is a smart startup advisor that allows businesses to input details about their operations and goals. By leveraging databases, external APIs, and AI models, it suggests funding opportunities, networking events, and strategic resources. The interface is designed with responsive web technologies and emphasizes clarity, accessibility, and actionable insights. LaunchMate highlights both backend data integration and frontend presentation skills in a real-world business context.</p>
+          <p><strong>Tools:</strong> Java, Java Spring boot, SQL, JavaScript, HTML, CSS, Docker, Kubernetes, CI/CD pipelines.</p>
+          <p><strong>Role:</strong> <strong>Product owner</strong>, backend developer, frontend developer</p>
+        </div>
+        <div class="project-actions">
+          <button class="btn-more" aria-expanded="false">Visa mer</button>
+        </div>
+      </article>
 
-          <div class="project">
-        <img src="VibeTonight.png" alt="Project image for VibeTonight" />
+      <!-- VibeTonight -->
+      <article class="project" data-tags="musik,api,betalning,backend,frontend">
+        <img loading="lazy" src="VibeTonight.png" alt="Project image for VibeTonight" />
         <h3>VibeTonight (Ongoing Project)</h3>
-        <p>The application was developed to support users in discovering and enjoying live music events. VibeTonight is a smart event recommendation system that allows users to input their music preferences and location. By leveraging databases, external APIs, and AI models, it suggests upcoming concerts, festivals, and local gigs. The interface is designed with responsive web technologies and emphasizes clarity, accessibility, and actionable insights. VibeTonight highlights both backend data integration and frontend presentation skills in a real-world entertainment context.</p>
-        <p><strong>Tools:</strong> Java, Java Spring boot, SQL, JavaScript, HTML, CSS.</p>
-        <p><strong>Role:</strong> <strong>Product owner</strong>, backend developer, frontend developer</p>
-      </div>
+        <div class="project-body collapsed">
+          <p>The application was developed to support users in discovering and enjoying live music events. VibeTonight is a smart event recommendation system that allows users to input their music preferences and location. By leveraging databases, external APIs, and AI models, it suggests upcoming concerts, festivals, and local gigs. The interface is designed with responsive web technologies and emphasizes clarity, accessibility, and actionable insights. VibeTonight highlights both backend data integration and frontend presentation skills in a real-world entertainment context.</p>
+          <p><strong>Tools:</strong> Java, Java Spring boot, SQL, JavaScript, HTML, CSS.</p>
+          <p><strong>Role:</strong> <strong>Product owner</strong>, backend developer, frontend developer</p>
+        </div>
+        <div class="project-actions">
+          <button class="btn-more" aria-expanded="false">Visa mer</button>
+        </div>
+      </article>
 
-        <div class="project">
-        <img src="Time4Movie.png" alt="Project image for Time4Movie" />
+      <!-- Time4Movie -->
+      <article class="project" data-tags="film,api,betalning,backend,frontend">
+        <img loading="lazy" src="Time4Movie.png" alt="Project image for Time4Movie" />
         <h3>Time4Movie (Ongoing Project)</h3>
-        <p>The application was designed to streamline the cinema booking experience. Time4Movie is a smart movie booking assistant that lets users browse real-time showtimes, check seat availability, and book tickets instantly. By integrating databases, external APIs, and AI-driven recommendations, it also suggests movies based on user preferences and trending films. The interface is built with responsive web technologies and emphasizes simplicity, accessibility, and user delight. Time4Movie showcases both backend transaction handling and frontend interaction design in a real-world entertainment context.</p>
-        <p><strong>Tools:</strong> Java, Java Spring boot, SQL, JavaScript, HTML, CSS.</p>
-        <p><strong>Role:</strong> <strong>Product owner</strong>, backend developer, frontend developer</p>
-      </div>
+        <div class="project-body collapsed">
+          <p>The application was designed to streamline the cinema booking experience. Time4Movie is a smart movie booking assistant that lets users browse real-time showtimes, check seat availability, and book tickets instantly. By integrating databases, external APIs, and AI-driven recommendations, it also suggests movies based on user preferences and trending films. The interface is built with responsive web technologies and emphasizes simplicity, accessibility, and user delight. Time4Movie showcases both backend transaction handling and frontend interaction design in a real-world entertainment context.</p>
+          <p><strong>Tools:</strong> Java, Java Spring boot, SQL, JavaScript, HTML, CSS.</p>
+          <p><strong>Role:</strong> <strong>Product owner</strong>, backend developer, frontend developer</p>
+        </div>
+        <div class="project-actions">
+          <button class="btn-more" aria-expanded="false">Visa mer</button>
+        </div>
+      </article>
 
-      <div class="project">
-        <img src="pictures/pic2.png" alt="HabitView" />
+      <!-- HabitView -->
+      <article class="project" data-tags="hälsa,backend,frontend,api">
+        <img loading="lazy" src="pictures/pic2.png" alt="HabitView" />
         <h3>HabitView</h3>
-        <p>HabitView is a <strong>web-based system</strong> that allows users to <strong>track their habits in the areas of sleep, diet, and exercise</strong>. The goal is to promote a <strong>healthier lifestyle</strong> by providing a <strong>clean and intuitive interface</strong> where users can monitor their progress over time. This project is currently in progress, and upcoming features include <strong>interactive graphs</strong> to visualize user data and <strong>automated recommendations</strong> based on logged information.</p>
-        <p><strong>Tools:</strong> Java, Java Spring boot, SQL, JavaScript, HTML, CSS, CI/CD pipelines.</p>
-        <p><strong>API:s used:</strong> ChatGPT API</p>
-        <p><strong>Role:</strong> Backend developer, frontend developer</p>
-      </div>
+        <div class="project-body collapsed">
+          <p>HabitView is a <strong>web-based system</strong> that allows users to <strong>track their habits in the areas of sleep, diet, and exercise</strong>. The goal is to promote a <strong>healthier lifestyle</strong> by providing a <strong>clean and intuitive interface</strong> where users can monitor their progress over time. This project is currently in progress, and upcoming features include <strong>interactive graphs</strong> to visualize user data and <strong>automated recommendations</strong> based on logged information.</p>
+          <p><strong>Tools:</strong> Java, Java Spring boot, SQL, JavaScript, HTML, CSS, CI/CD pipelines.</p>
+          <p><strong>API:s used:</strong> ChatGPT API</p>
+          <p><strong>Role:</strong> Backend developer, frontend developer</p>
+        </div>
+        <div class="project-actions">
+          <button class="btn-more" aria-expanded="false">Visa mer</button>
+        </div>
+      </article>
 
-      <div class="project">
-        <img src="pictures/pic3.png" alt="Project image for Legacy IDE Modernization" />
+      <!-- Zenit -->
+      <article class="project" data-tags="ide,desktop,frontend,backend">
+        <img loading="lazy" src="pictures/pic3.png" alt="Project image for Legacy IDE Modernization" />
         <h3>Zenit - Modernization of a Legacy IDE</h3>
-        <p>As <strong>Product Owner</strong>, I led the modernization of a legacy IDE. The project focused on <strong>improving performance</strong>, <strong>user experience</strong>, and <strong>long-term maintainability</strong>. I coordinated development, prioritized features, and ensured that technical improvements aligned with user needs and business goals.</p>
-        <p><strong>Tools:</strong> Java, Maven, JavaFX, Object-oriented programming</p>
-        <p><strong>Role:</strong> Product owner, backend developer, frontend developer</p>
-      </div>
+        <div class="project-body collapsed">
+          <p>As <strong>Product Owner</strong>, I led the modernization of a legacy IDE. The project focused on <strong>improving performance</strong>, <strong>user experience</strong>, and <strong>long-term maintainability</strong>. I coordinated development, prioritized features, and ensured that technical improvements aligned with user needs and business goals.</p>
+          <p><strong>Tools:</strong> Java, Maven, JavaFX, Object-oriented programming</p>
+          <p><strong>Role:</strong> Product owner, backend developer, frontend developer</p>
+        </div>
+        <div class="project-actions">
+          <button class="btn-more" aria-expanded="false">Visa mer</button>
+        </div>
+      </article>
 
-      <div class="project">
-        <img src="pictures/pic1.png" alt="Project image for Bluesky Manager" />
+      <!-- Bluesky Manager -->
+      <article class="project" data-tags="api,frontend,backend">
+        <img loading="lazy" src="pictures/pic1.png" alt="Project image for Bluesky Manager" />
         <h3>Bluesky Manager – Spelling-Enhanced Publishing for Bluesky</h3>
-        <p>Bluesky Manager is a <strong>web service</strong> that helps users <strong>improve their writing before publishing</strong> on the Bluesky platform. By combining <strong>advanced spellchecking</strong> through the LIBRIS API with a <strong>simple and intuitive interface</strong>, the service offers <strong>real-time suggestions</strong> and ensures <strong>polished, high-quality posts</strong>.</p>
-        <p><strong>Tools:</strong> Java & Spring Boot, HTML, CSS, JavaScript, Maven.</p>
-        <p><strong>API:s used:</strong> LIBRIS API, Bluesky API</p>
-        <p><strong>Role:</strong> Backend developer, frontend developer</p>
-      </div>
+        <div class="project-body collapsed">
+          <p>Bluesky Manager is a <strong>web service</strong> that helps users <strong>improve their writing before publishing</strong> on the Bluesky platform. By combining <strong>advanced spellchecking</strong> through the LIBRIS API with a <strong>simple and intuitive interface</strong>, the service offers <strong>real-time suggestions</strong> and ensures <strong>polished, high-quality posts</strong>.</p>
+          <p><strong>Tools:</strong> Java & Spring Boot, HTML, CSS, JavaScript, Maven.</p>
+          <p><strong>API:s used:</strong> LIBRIS API, Bluesky API</p>
+          <p><strong>Role:</strong> Backend developer, frontend developer</p>
+        </div>
+        <div class="project-actions">
+          <button class="btn-more" aria-expanded="false">Visa mer</button>
+        </div>
+      </article>
 
-      <div class="project">
-        <img src="pictures/pic4.png" alt="Project image for Chat System" />
+      <!-- Chat System -->
+      <article class="project" data-tags="desktop,frontend,backend">
+        <img loading="lazy" src="pictures/pic4.png" alt="Project image for Chat System" />
         <h3>Chat System – Real-Time Messaging</h3>
-        <p>A <strong>multi-client chat application</strong> built in Java with a <strong>custom GUI</strong>. Users can register, send messages (including images), and manage contacts in <strong>real time</strong>. Perfect for demonstrating skills in <strong>object-oriented design</strong>, <strong>socket programming</strong>, and <strong>user-centric interface development</strong>.</p>
-        <p><strong>Tools:</strong> Java, Swing, Socket programming, File management, OOP</p>
-        <p><strong>Role:</strong> Team leader, backend developer, frontend developer</p>
-      </div>
+        <div class="project-body collapsed">
+          <p>A <strong>multi-client chat application</strong> built in Java with a <strong>custom GUI</strong>. Users can register, send messages (including images), and manage contacts in <strong>real time</strong>. Perfect for demonstrating skills in <strong>object-oriented design</strong>, <strong>socket programming</strong>, and <strong>user-centric interface development</strong>.</p>
+          <p><strong>Tools:</strong> Java, Swing, Socket programming, File management, OOP</p>
+          <p><strong>Role:</strong> Team leader, backend developer, frontend developer</p>
+        </div>
+        <div class="project-actions">
+          <button class="btn-more" aria-expanded="false">Visa mer</button>
+        </div>
+      </article>
 
     </div>
   </section>
 
   <section id="skills">
     <h2>Skills</h2>
-    <ul>
+    <ul class="skills-list">
       <li><strong>Java</strong></li>
       <li><strong>Spring Boot</strong></li>
       <li><strong>HTML & CSS</strong></li>
@@ -125,13 +197,21 @@
     <h2>Contact</h2>
     <p><strong>Name:</strong> Saman Jejo</p>
     <p><strong>Phone number:</strong> 076 233 27 66</p>
-    <p><strong>Email:</strong> saman_jejo@hotmail.com</p>
+    <p><strong>Email:</strong> <a id="copyEmail" href="mailto:saman_jejo@hotmail.com">saman_jejo@hotmail.com</a> <button class="inline-btn" id="copyBtn" aria-label="Kopiera e-postadress">Kopiera</button></p>
   </section>
+
+  <button id="backToTop" class="back-to-top" aria-label="Till toppen">↑</button>
+
+  <div id="imgModal" class="modal" aria-hidden="true" role="dialog" aria-label="Bildförhandsvisning">
+    <button class="modal-close" aria-label="Stäng">✕</button>
+    <img alt="">
+    <p class="modal-caption"></p>
+  </div>
 
   <footer>
     <p>&copy; 2025 Saman Jejo. All rights reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>

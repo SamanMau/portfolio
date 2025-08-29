@@ -1,166 +1,101 @@
-/* style.css */
+/* Bas */
+:root {
+  --bg: #201f1f;
+  --bg-soft: #2d2d2d;
+  --panel: #050505;
+  --text: #ffffff;
+  --muted: #ccc;
+  --accent: #00acee;
+  --shadow: rgba(98, 97, 97, 0.5);
+}
+:root.light {
+  --bg: #f6f7f9;
+  --bg-soft: #eceff3;
+  --panel: #ffffff;
+  --text: #0f172a;
+  --muted: #475569;
+  --accent: #0077b6;
+  --shadow: rgba(0,0,0,0.1);
+}
 
+* { box-sizing: border-box; }
+html,body { height: 100%; }
 body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #201f1f;
-    color: #ffffff;
-    line-height: 1.6;
-    font-size: 20px;
-  }
-  
-  header {
-    text-align: center;
-    padding: 2rem;
-    background-color: rgb(25, 25, 25);
-  }
-  
-  header h1 {
-    margin-bottom: 1rem;
-    font-size: 2.5rem;
-    color: #ffffff;
-  }
-  
-  .github-link {
-    display: inline-block;
-    color: #00acee;
-    text-decoration: none;
-    margin-top: 0.5rem;
-    font-weight: bold;
-  }
-  
-  section {
-    padding: 3rem 2rem;
-    max-width: 1300px;
-    margin: auto;
-  }
-  
-  section h2 {
-    font-size: 2rem;
-    color: #ffffff;
-    border-bottom: 2px solid #00acee;
-    padding-bottom: 0.5rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* två per rad */
-    gap: 2rem;
-  }
-  
-  .project {
-    background-color: #050505;
-    border-radius: 8px;
-    padding: 1rem;
-    box-shadow: 0 0 10px rgba(98, 97, 97, 0.5);
-    transition: transform 0.3s ease;
-  }
-  
-  .project:hover {
-    transform: scale(1.02);
-  }
-  
-  .project img {
-    width: 100%;
-    height: 525px;
-    object-fit: contain;
-    border-radius: 5px;
-  }
-  
-  .project h3 {
-    color: #00acee;
-    margin-top: rem;
-  }
-  
-  .project a {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  ul li {
-    background-color: #2d2d2d;
-    margin-bottom: 0.5rem;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    display: inline-block;
-    margin-right: 0.5rem;
-  }
-  
-  #contact-form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  #contact-form label {
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  #contact-form input,
-  #contact-form textarea {
-    padding: 0.75rem;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    background-color: #3a3a3a;
-    color: #fff;
-  }
-  
-  #contact-form button {
-    margin-top: 1.5rem;
-    padding: 0.75rem;
-    background-color: #00acee;
-    border: none;
-    color: #fff;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  #contact-form button:hover {
-    background-color: #008bb9;
-  }
-  
-  footer {
-    text-align: center;
-    padding: 2rem;
-    background-color: #2a2a2a;
-    color: #aaa;
-    font-size: 0.9rem;
-  }
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  font-size: 20px;
+}
 
-  .quick-facts {
-    margin-top: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
-    font-size: 1rem;
-    color: #ccc;
-  }
+/* Tillgänglighet */
+.skip-link{
+  position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;
+}
+.skip-link:focus{left:1rem;top:1rem;width:auto;height:auto;background:var(--accent);color:#fff;padding:.5rem .75rem;border-radius:.5rem;z-index:1000}
 
-  .quick-facts span strong {
-    color: #00acee;
-    font-size: 1.2rem;
-  }
-  
-  .quick-facts span {
-    background-color: #2d2d2d;
-    padding: 0.5rem 1.2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-    transition: transform 0.2s ease;
-  }
-  
-  .quick-facts span:hover {
-    transform: scale(1.05);
-  }
-  
-  
+/* Header */
+header { padding: 2rem; background-color: rgb(25,25,25); }
+:root.light header { background:#fff; }
+.topbar{display:flex;gap:1rem;align-items:center;justify-content:space-between;flex-wrap:wrap}
+header h1 { margin: 0; font-size: 2rem; color: var(--text); }
+.github-link { color: var(--accent); text-decoration: none; font-weight: bold; }
+.topbar-actions{display:flex;gap:.75rem;align-items:center}
+.icon-btn{background:var(--bg-soft);border:0;border-radius:.6rem;padding:.5rem .7rem;cursor:pointer;color:var(--text)}
+.icon-btn:hover{filter:brightness(1.1)}
+
+/* Snabbfakta */
+.quick-facts {
+  margin-top: 1rem;
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;
+  font-size: 1rem; color: var(--muted);
+}
+.quick-facts span { background-color: var(--bg-soft); padding: .6rem 1rem; border-radius: 8px; box-shadow: 0 2px 6px var(--shadow); transition: transform .2s ease; }
+.quick-facts span strong { color: var(--accent); font-size: 1.2rem; }
+.quick-facts span:hover { transform: scale(1.05); }
+
+/* Sektioner */
+section { padding: 3rem 2rem; max-width: 1300px; margin: auto; }
+section h2 { font-size: 2rem; color: var(--text); border-bottom: 2px solid var(--accent); padding-bottom: .5rem; margin-bottom: 1.5rem; }
+
+/* Kontroller */
+.controls { max-width: 1300px; margin: 1.5rem auto 0; padding: 0 2rem; display:flex; flex-direction:column; gap: .75rem; }
+.controls input[type="search"]{width:100%;padding:.9rem 1rem;border-radius:.6rem;border:1px solid transparent;background:var(--bg-soft);color:var(--text)}
+.controls input[type="search"]::placeholder{color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem}
+.chip{border:0;background:var(--bg-soft);color:var(--text);padding:.5rem .9rem;border-radius:999px;cursor:pointer}
+.chip.active,.chip:hover{outline:2px solid var(--accent)}
+
+/* Projektgrid */
+.project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); gap: 2rem; }
+.project { background-color: var(--panel); border-radius: 12px; padding: 1rem; box-shadow: 0 0 10px var(--shadow); transition: transform .25s ease, box-shadow .25s ease; }
+.project:hover { transform: translateY(-4px); box-shadow: 0 10px 24px var(--shadow); }
+.project img { width: 100%; height: 525px; object-fit: contain; border-radius: 8px; cursor: zoom-in; }
+.project h3 { color: var(--accent); margin: .5rem 0 0.25rem; }
+.project .project-body{max-height:9.5rem;overflow:hidden;mask-image: linear-gradient(180deg,#000 60%,transparent);transition:max-height .3s ease}
+.project .project-body.expanded{max-height:100rem;mask-image:none}
+.project .project-actions{display:flex;justify-content:flex-end;margin-top:.5rem}
+.btn-more{background:var(--bg-soft);border:0;border-radius:.5rem;padding:.5rem .8rem;color:var(--text);cursor:pointer}
+.btn-more:hover{outline:2px solid var(--accent)}
+
+/* Skills */
+ul { list-style: none; padding: 0; }
+ul li { background-color: var(--bg-soft); margin-bottom: .5rem; padding: .5rem 1rem; border-radius: 5px; display: inline-block; margin-right: .5rem; }
+
+/* Kontakt */
+.inline-btn{margin-left:.5rem;background:var(--bg-soft);border:0;border-radius:.5rem;padding:.35rem .6rem;color:var(--text);cursor:pointer}
+.inline-btn:hover{outline:2px solid var(--accent)}
+
+/* Modal */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.75);display:none;align-items:center;justify-content:center;flex-direction:column;padding:1rem;z-index:1000}
+.modal img{max-width:min(1100px,95vw);max-height:80vh;border-radius:12px}
+.modal .modal-caption{margin-top:.5rem;color:#fff;opacity:.9}
+.modal .modal-close{position:absolute;top:1rem;right:1rem;background:transparent;border:0;color:#fff;font-size:1.8rem;cursor:pointer}
+.modal.show{display:flex}
+
+/* Back to top */
+.back-to-top{position:fixed;right:1rem;bottom:1rem;background:var(--accent);color:#fff;border:0;border-radius:999px;width:44px;height:44px;cursor:pointer;display:none;align-items:center;justify-content:center;box-shadow:0 6px 18px var(--shadow)}
+.back-to-top.show{display:flex}
+footer { text-align: center; padding: 2rem; background-color: #2a2a2a; color: #aaa; font-size: .9rem; }
+:root.light footer{background:#eef2f7;color:#475569}
