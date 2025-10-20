@@ -63,8 +63,8 @@ section h2 { font-size: 2rem; color: var(--text); border-bottom: 2px solid var(-
 .controls { max-width: 1300px; margin: 1.5rem auto 0; padding: 0 2rem; display:flex; flex-direction:column; gap: .75rem; }
 .controls input[type="search"]{width:100%;padding:.9rem 1rem;border-radius:.6rem;border:1px solid transparent;background:var(--bg-soft);color:var(--text)}
 .controls input[type="search"]::placeholder{color:var(--muted)}
-.chips{display:flex;flex-wrap:wrap;gap:.5rem}
-.chip{border:0;background:var(--bg-soft);color:var(--text);padding:.5rem .9rem;border-radius:999px;cursor:pointer}
+.chips{display:flex;flex-wrap:wrap;gap:.8rem}
+.chip{border:0;background:var(--bg-soft);color:var(--text);padding:.9rem 1.8rem;border-radius:999px;cursor:pointer}
 .chip.active,.chip:hover{outline:2px solid var(--accent)}
 
 /* Projektgrid */
