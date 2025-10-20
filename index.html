@@ -234,7 +234,9 @@ document.querySelectorAll('.project').forEach(card=>{
   document.querySelectorAll('.project img').forEach(img=>{
     img.addEventListener('click', ()=> open(img.src, img.closest('.project').querySelector('h3')?.textContent));
   });
-  modal.addEventListener('click', (e)=>{ if(e.target===modal) close(); });
+modal.addEventListener('click', (e) => {
+  if (!modalImg.contains(e.target)) close();
+});
   modal.querySelector('.modal-close').addEventListener('click', close);
   document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') close(); });
 })();

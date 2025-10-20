@@ -89,7 +89,15 @@ ul li { background-color: var(--bg-soft); margin-bottom: .5rem; padding: .5rem 1
 
 /* Modal */
 .modal{position:fixed;inset:0;background:rgba(0,0,0,.75);display:none;align-items:center;justify-content:center;flex-direction:column;padding:1rem;z-index:1000}
-.modal img{max-width:min(1100px,95vw);max-height:80vh;border-radius:12px}
+/* Visa alltid hela bilden i modalen */
+.modal img{
+  width: 95vw;
+  height: 85vh;
+  object-fit: contain;   /* viktigt: beskär aldrig */
+  max-width: none;       /* nollställ tidigare max-regler */
+  max-height: none;
+  border-radius: 12px;
+}
 .modal .modal-caption{margin-top:.5rem;color:#fff;opacity:.9}
 .modal .modal-close{position:absolute;top:1rem;right:1rem;background:transparent;border:0;color:#fff;font-size:1.8rem;cursor:pointer}
 .modal.show{display:flex}
