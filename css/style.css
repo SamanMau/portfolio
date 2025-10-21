@@ -113,3 +113,20 @@ footer { text-align: center; padding: 2rem; background-color: #2a2a2a; color: #a
 #projects { padding-top: 1.25rem; }
 #projects h2 { margin-top: 0; } /* säkerställer att rubriken inte skapar extra glapp */
 
+.cv-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #00acee;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cv-button:hover {
+  background-color: #008bb9;
+  transform: scale(1.05);
+}
+
