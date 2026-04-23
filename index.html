@@ -1,329 +1,499 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Saman Jejo - Software Developer</title>
+  <title>Saman Jejo | Software Engineer</title>
+  <meta
+    name="description"
+    content="Portfolio of Saman Jejo, a software engineer focused on backend development, cloud technologies, APIs and secure scalable systems."
+  />
   <link rel="stylesheet" href="css/style.css" />
 </head>
+
+<div id="imgModal" class="modal" aria-hidden="true" role="dialog" aria-label="Image preview">
+  <button class="modal-close" aria-label="Close image">✕</button>
+  <img alt="">
+  <p class="modal-caption"></p>
+</div>
 <body>
-  <a class="skip-link" href="#projects">Hoppa till projekt</a>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <header>
-    <div class="topbar">
-      <h1>Saman Jejo - Software Developer</h1>
-      <div class="topbar-actions">
-        <a href="https://github.com/SamanMau" class="github-link" target="_blank" aria-label="Öppna GitHub-profil">GitHub</a>
-        <button id="theme-toggle" class="icon-btn" aria-label="Växla tema">🌓</button>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#" class="brand">Saman Jejo</a>
+
+      <div class="nav-actions">
+        <a href="https://github.com/SamanMau" target="_blank" rel="noopener" class="nav-link">GitHub</a>
+        <a href="https://www.linkedin.com/in/saman-jejo-a80b69329/" target="_blank" rel="noopener" class="nav-link">LinkedIn</a>
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">🌓</button>
       </div>
-    </div>
-
-    <div class="quick-facts" id="quickFacts">
-      <span>👨‍💻 Years of programming: <strong data-count="5">0</strong>+</span>
-      <span>💼 Internships: <strong data-count="1">0</strong></span>
-      <span>🚀 High scale projects: <strong data-count="4">0</strong></span>
-      <span>📚 Software teaching experience: <strong data-count="1">0</strong> year</span>
     </div>
   </header>
 
-  <nav class="controls" aria-label="Projektfilter">
-    <input id="search" type="search" placeholder="Search project (name, tags, text) …" aria-label="Sök projekt" />
-    <div id="chips" class="chips">
-      <button class="chip active" data-filter="alla">All</button>
-      <button class="chip" data-filter="flagskepp">Large projects</button>
-      <button class="chip" data-filter="fullstack">Fullstack</button>
-      <button class="chip" data-filter="ai">AI</button>
-      <button class="chip" data-filter="api">API</button>
-    </div>
-  </nav>
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow">Backend / Cloud Software Engineer</p>
+          <h1>Saman Jejo</h1>
+          <p class="hero-lead">
+            Software engineer graduating in 2026 with experience developing scalable backend systems
+            in stakeholder-driven and security-sensitive environments. Strong foundation in Java,
+            APIs, cloud technologies and secure system design.
+          </p>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Software engineer with <strong>5 years of experience</strong> in full-stack development. I build scalable systems and work as a <strong>teaching assistant in programming</strong> at Malmö University. I’m also completing a long-term <strong>software engineering internship at Ideon Science Park</strong>, where I am the sole developer of a complex project.</p>
-    <p>I’m now <strong>seeking a full-time software development role</strong> where I can contribute with my technical expertise and problem-solving skills.</p>
-      <p><strong>CV is available upon request.</strong></p>
+          <div class="hero-cta">
+            <a href="#featured-projects" class="btn btn-primary">View Featured Projects</a>
+            <a href="#contact" class="btn btn-secondary">Contact Me</a>
+          </div>
 
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-
-    <div class="project-grid">
-
-      <!-- Amyna -->
-      <article class="project" data-tags="api,fullstack,flagskepp">
-        <img loading="lazy" src="pictures/pic6.png" alt="Project image for Amyna" />
-        <h3>Amyna (Ongoing Internship Project)</h3>
-        <div class="project-body collapsed">
-          <p>Amyna is a <strong>national defense innovation platform</strong> developed for Ideon Science Park to <strong>strengthen Sweden’s technological readiness and collaboration</strong> between startups, research institutions, and defense organizations. The platform enables <strong>secure partner matchmaking</strong>, project visibility, and knowledge sharing across public and private sectors. Developed as an end-to-end internship project with focus on secure system design, AI-supported partner matching and scalable data-driven workflows.</p>
-          <p><strong>Role:</strong> Full-Stack Developer</p>
+          <div class="hero-tags">
+            <span>Java</span>
+            <span>Spring Boot</span>
+            <span>AWS</span>
+            <span>REST APIs</span>
+            <span>Microservices</span>
+            <span>Security</span>
+          </div>
         </div>
-        <div class="project-actions">
-          <button class="btn-more" aria-expanded="false">Show more</button>
-        </div>
-      </article>
 
-      <!-- PlanTrip -->
-      <article class="project" data-tags="api,ai,fullstack,flagskepp">
-        <img loading="lazy" src="pictures/pic5.png" alt="Project image for PlanTrip" />
-        <h3>PlanTrip</h3>
-        <div class="project-body collapsed">
-          <p>PlanTrip is a full-stack travel assistant built around robust backend services and external API integrations. The application combines scalable backend architecture, caching strategies and real-time data services to improve performance and deliver personalized travel recommendations.</p>
-          <p><strong>Tools:</strong> Java, Java Spring boot, SQL, JavaScript, HTML, CSS, Docker, Kubernetes, CI/CD pipelines.</p>
-          <p><strong>API:s used:</strong> Amadeus API, Spotify API, ChatGPT API, TMDb API, Pexels API, Hibernate/JPA</p>
-          <p><strong>Role:</strong> <strong>Product owner</strong>, backend developer, frontend developer</p>
+        <div class="hero-image-wrap">
+          <img src="pictures/pic8.png" alt="Portrait of Saman Jejo" class="hero-image" />
         </div>
-        <div class="project-actions">
-          <button class="btn-more" aria-expanded="false">Show more</button>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="container stats-grid" id="quickFacts">
+        <div class="stat-card">
+          <span class="stat-label">Years of programming</span>
+          <strong data-count="5">0</strong>
         </div>
-      </article>
-
-      <!-- SecuraCloud -->
-      <article class="project" data-tags="fullstack,flagskepp">
-        <img loading="lazy" src="pictures/pic7.png" alt="SecuraCloud" />
-        <h3>SecuraCloud</h3>
-        <div class="project-body collapsed">
-          <p>SecuraCloud is a secure cloud-based document management system focused on scalable backend architecture, authentication, and cloud security. The project explores OAuth2, role-based authorization, secure REST APIs and AWS S3 integration, with emphasis on secure resource handling, performance and maintainable system design.</p>
-          <p><strong>Tools:</strong> PostgreSQL, EF Core, Swagger, Docker, React, TypeScript, Tailwind CSS, OAuth2 / RBAC, AWS S3 </p>
-          <p><strong>Role:</strong> Backend developer, frontend developer</p>
+        <div class="stat-card">
+          <span class="stat-label">Internships</span>
+          <strong data-count="1">0</strong>
         </div>
-        <div class="project-actions">
-          <button class="btn-more" aria-expanded="false">Show more</button>
+        <div class="stat-card">
+          <span class="stat-label">Large projects</span>
+          <strong data-count="4">0</strong>
         </div>
-      </article>
-
-      <!-- HabitView -->
-      <article class="project" data-tags="fullstack,api">
-        <img loading="lazy" src="pictures/pic2.png" alt="HabitView" />
-        <h3>HabitView</h3>
-        <div class="project-body collapsed">
-          <p>HabitView is a <strong>web-based system</strong> that allows users to <strong>track their habits in the areas of sleep, diet, and exercise</strong>. The goal is to promote a <strong>healthier lifestyle</strong> by providing a <strong>clean and intuitive interface</strong> where users can monitor their progress over time. This project is currently in progress, and upcoming features include <strong>interactive graphs</strong> to visualize user data and <strong>automated recommendations</strong> based on logged information.</p>
-          <p><strong>Tools:</strong> Java, Java Spring boot, SQL, JavaScript, HTML, CSS, CI/CD pipelines.</p>
-          <p><strong>API:s used:</strong> ChatGPT API</p>
-          <p><strong>Role:</strong> Backend developer, frontend developer</p>
+        <div class="stat-card">
+          <span class="stat-label">Years of teaching experience</span>
+          <strong data-count="1">0</strong>
         </div>
-        <div class="project-actions">
-          <button class="btn-more" aria-expanded="false">Show more</button>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">About</p>
+          <h2>What I focus on</h2>
         </div>
-      </article>
 
-      <!-- Zenit -->
-      <article class="project" data-tags="ide,desktop,fullstack">
-        <img loading="lazy" src="pictures/pic3.png" alt="Project image for Legacy IDE Modernization" />
-        <h3>Zenit - Modernization of a Legacy IDE</h3>
-        <div class="project-body collapsed">
-          <p>As <strong>Product Owner</strong>, I led the modernization of a legacy IDE. The project focused on <strong>improving performance</strong>, <strong>user experience</strong>, and <strong>long-term maintainability</strong>. I coordinated development, prioritized features, and ensured that technical improvements aligned with user needs and business goals.</p>
-          <p><strong>Tools:</strong> Java, Maven, JavaFX, Object-oriented programming</p>
-          <p><strong>Role:</strong> Product owner, backend developer, frontend developer</p>
+        <div class="about-card">
+          <p>
+            I enjoy building robust backend systems with clear business logic, secure APIs and
+            scalable architecture. My strongest areas are Java backend development, API integration,
+            cloud-oriented systems and security-focused design.
+          </p>
+          <p>
+            I am currently looking for full-time opportunities in backend development, cloud
+            development and consulting-oriented software engineering roles.
+          </p>
         </div>
-        <div class="project-actions">
-          <button class="btn-more" aria-expanded="false">Show more</button>
+      </div>
+    </section>
+
+    <section class="section" id="featured-projects">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Projects</p>
+          <h2>Featured Projects</h2>
         </div>
-      </article>
 
-      <!-- Bluesky Manager -->
-      <article class="project" data-tags="api,fullstack">
-        <img loading="lazy" src="pictures/pic1.png" alt="Project image for Bluesky Manager" />
-        <h3>Bluesky Manager – Spelling-Enhanced Publishing for Bluesky</h3>
-        <div class="project-body collapsed">
-          <p>Bluesky Manager is a <strong>web service</strong> that helps users <strong>improve their writing before publishing</strong> on the Bluesky platform. By combining <strong>advanced spellchecking</strong> through the LIBRIS API with a <strong>simple and intuitive interface</strong>, the service offers <strong>real-time suggestions</strong> and ensures <strong>polished, high-quality posts</strong>.</p>
-          <p><strong>Tools:</strong> Java & Spring Boot, HTML, CSS, JavaScript, Maven.</p>
-          <p><strong>API:s used:</strong> LIBRIS API, Bluesky API</p>
-          <p><strong>Role:</strong> Backend developer, frontend developer</p>
+        <div class="project-grid featured-grid">
+          <article class="project-card featured">
+            <img src="pictures/pic6.png" alt="Project image for Amyna" />
+            <div class="project-content">
+              <div class="project-top">
+                <h3>Amyna</h3>
+                <span class="project-badge">Ongoing Internship Project</span>
+              </div>
+              <p>
+                Amyna is a national defense innovation platform developed for Ideon Science Park to
+                strengthen Sweden’s technological readiness and collaboration between startups,
+                research institutions and defense organizations.
+              </p>
+              <p>
+                Developed as an end-to-end internship project with focus on secure system design,
+                AI-supported partner matching and scalable data-driven workflows.
+              </p>
+              <p><strong>Role:</strong> Sole Developer (Full-Stack)</p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="pictures/pic7.png" alt="Project image for SecuraCloud" />
+            <div class="project-content">
+              <h3>SecuraCloud</h3>
+              <p>
+                A secure cloud-based document management system focused on scalable backend
+                architecture, authentication and cloud security.
+              </p>
+              <p>
+                The project explores OAuth2, role-based authorization, secure REST APIs and AWS S3
+                integration, with emphasis on secure resource handling, performance and maintainable
+                system design.
+              </p>
+              <p>
+                <strong>Tech Stack:</strong> Java, Spring Boot, PostgreSQL, Docker, AWS S3, React,
+                TypeScript, Tailwind CSS, OAuth2 / RBAC
+              </p>
+              <p><strong>Role:</strong> Backend Developer, Frontend Developer</p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="pictures/pic5.png" alt="Project image for PlanTrip" />
+            <div class="project-content">
+              <h3>PlanTrip</h3>
+              <p>
+                A full-stack travel assistant built around robust backend services and external API
+                integrations.
+              </p>
+              <p>
+                The application combines scalable backend architecture, caching strategies and
+                real-time data services to improve performance and deliver personalized travel
+                recommendations.
+              </p>
+              <p>
+                <strong>Tech Stack:</strong> Java, Spring Boot, SQL, JavaScript, Docker,
+                Kubernetes, CI/CD
+              </p>
+              <p>
+                <strong>APIs:</strong> Amadeus API, Spotify API, ChatGPT API, TMDb API, Pexels API
+              </p>
+              <p><strong>Role:</strong> Full-Stack Developer & Product Owner</p>
+            </div>
+          </article>
         </div>
-        <div class="project-actions">
-          <button class="btn-more" aria-expanded="false">Show more</button>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">More Work</p>
+          <h2>Other Projects</h2>
         </div>
-      </article>
 
-      <!-- Chat System -->
-      <article class="project" data-tags="desktop,fullstack">
-        <img loading="lazy" src="pictures/pic4.png" alt="Project image for Chat System" />
-        <h3>Chat System – Real-Time Messaging</h3>
-        <div class="project-body collapsed">
-          <p>A <strong>multi-client chat application</strong> built in Java with a <strong>custom GUI</strong>. Users can register, send messages (including images), and manage contacts in <strong>real time</strong>. Perfect for demonstrating skills in <strong>object-oriented design</strong>, <strong>socket programming</strong>, and <strong>user-centric interface development</strong>.</p>
-          <p><strong>Tools:</strong> Java, Swing, Socket programming, File management, OOP</p>
-          <p><strong>Role:</strong> Team leader, backend developer, frontend developer</p>
+        <div class="project-grid small-grid">
+          <article class="project-card compact">
+            <img src="pictures/pic2.png" alt="Project image for HabitView" />
+            <div class="project-content">
+              <h3>HabitView</h3>
+              <p>
+                Web-based system for tracking sleep, diet and exercise habits with a focus on
+                usability, data handling and future recommendation features.
+              </p>
+            </div>
+          </article>
+
+          <article class="project-card compact">
+            <img src="pictures/pic3.png" alt="Project image for Zenit" />
+            <div class="project-content">
+              <h3>Zenit</h3>
+              <p>
+                Modernization of a legacy IDE with focus on performance, usability and long-term
+                maintainability.
+              </p>
+            </div>
+          </article>
+
+          <article class="project-card compact">
+            <img src="pictures/pic1.png" alt="Project image for Bluesky Manager" />
+            <div class="project-content">
+              <h3>Bluesky Manager</h3>
+              <p>
+                Publishing tool that improves written content before posting by combining API-based
+                functionality with a clean web interface.
+              </p>
+            </div>
+          </article>
+
+          <article class="project-card compact">
+            <img src="pictures/pic4.png" alt="Project image for Chat System" />
+            <div class="project-content">
+              <h3>Chat System</h3>
+              <p>
+                Multi-client Java chat application demonstrating object-oriented design, socket
+                programming and real-time communication.
+              </p>
+            </div>
+          </article>
         </div>
-        <div class="project-actions">
-          <button class="btn-more" aria-expanded="false">Show more</button>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Skills</p>
+          <h2>Technical Profile</h2>
         </div>
-      </article>
 
-    </div>
-  </section>
+        <div class="skills-grid">
+          <article class="skill-card">
+            <h3>Backend</h3>
+            <ul>
+              <li>Java</li>
+              <li>Spring Boot</li>
+              <li>REST APIs</li>
+              <li>API Integration</li>
+              <li>System Design</li>
+              <li>Microservices</li>
+            </ul>
+          </article>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul class="skills-list">
-      <li><strong>Java (Spring Boot)</strong></li>
-      <li><strong>HTML & CSS</strong></li>
-      <li><strong>Agile Methodologies</strong></li>
-      <li><strong>Git</strong></li>
-      <li><strong>REST APIs</strong></li>
-      <li><strong>System Design</strong></li>
-      <li><strong>Microservices</strong></li>
-      <li><strong>AWS</strong></li>
-      <li><strong>Docker</strong></li>
-      <li><strong>CI/CD</strong></li>
-      <li><strong>OAuth2 / RBAC</strong></li>
-      <li><strong>SQL & PostgreSQL</strong></li>
-      <li><strong>Kubernetes</strong></li>
-      <li><strong>JavaScript / TypeScript</strong></li>
-      <li><strong>Strapi</strong></li>
-      <li><strong>Scrum</strong></li>
-      <li><strong>Python</strong></li>
-      <li><strong>Cloud Architecture</strong></li>
-      <li><strong>API Integration</strong></li>
-      <li><strong>Security</strong></li>
-      <li><strong>Performance Optimization</strong></li>
+          <article class="skill-card">
+            <h3>Cloud & DevOps</h3>
+            <ul>
+              <li>AWS</li>
+              <li>Docker</li>
+              <li>Kubernetes</li>
+              <li>CI/CD</li>
+              <li>Cloud Architecture</li>
+            </ul>
+          </article>
 
-    </ul>
-  </section>
+          <article class="skill-card">
+            <h3>Security</h3>
+            <ul>
+              <li>OAuth2</li>
+              <li>RBAC</li>
+              <li>Secure APIs</li>
+              <li>Backend Security</li>
+            </ul>
+          </article>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p><strong>Name:</strong> Saman Jejo</p>
-    <p><strong>Email:</strong> <a id="copyEmail" href="mailto:saman_jejo@hotmail.com">saman_jejo@hotmail.com</a> <button class="inline-btn" id="copyBtn" aria-label="Kopiera e-postadress">Kopiera</button></p>
-  </section>
+          <article class="skill-card">
+            <h3>Data & Other</h3>
+            <ul>
+              <li>SQL</li>
+              <li>PostgreSQL</li>
+              <li>Caching Strategies</li>
+              <li>JavaScript / TypeScript</li>
+              <li>Python</li>
+              <li>Strapi</li>
+              <li>Git</li>
+              <li>Scrum</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
 
-  <button id="backToTop" class="back-to-top" aria-label="Till toppen">↑</button>
+    <section class="section section-soft" id="contact">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Contact</p>
+          <h2>Let’s Connect</h2>
+        </div>
 
-  <div id="imgModal" class="modal" aria-hidden="true" role="dialog" aria-label="Bildförhandsvisning">
-    <button class="modal-close" aria-label="Stäng">✕</button>
-    <img alt="">
-    <p class="modal-caption"></p>
-  </div>
+        <div class="contact-card">
+          <p><strong>Name:</strong> Saman Jejo</p>
+          <p>
+            <strong>Email:</strong>
+            <a id="copyEmail" href="mailto:saman_jejo@hotmail.com">saman_jejo@hotmail.com</a>
+            <button class="inline-btn" id="copyBtn" aria-label="Copy email address">Copy</button>
+          </p>
+          <p>
+            <strong>GitHub:</strong>
+            <a href="https://github.com/SamanMau" target="_blank" rel="noopener">github.com/SamanMau</a>
+          </p>
+          <p>
+            <strong>LinkedIn:</strong>
+            <a href="https://www.linkedin.com/in/saman-jejo-a80b69329/" target="_blank" rel="noopener">
+              saman-jejo-a80b69329
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  <footer>
-    <p>&copy; 2025 Saman Jejo. All rights reserved.</p>
-  </footer>
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
 
   <script>
-    // Tema (ljus/mörk)
-(function initTheme(){
-  const root = document.documentElement;
-  const saved = localStorage.getItem('theme');
-  if(saved === 'light') root.classList.add('light');
-  document.getElementById('theme-toggle').addEventListener('click', () => {
-    root.classList.toggle('light');
-    localStorage.setItem('theme', root.classList.contains('light') ? 'light' : 'dark');
-  });
-})();
+    (function initTheme() {
+      const root = document.documentElement;
+      const saved = localStorage.getItem("theme");
+      if (saved === "light") root.classList.add("light");
 
-// Animerade räknare
-(function animateCounters(){
-  const counters = document.querySelectorAll('#quickFacts strong[data-count]');
-  const duration = 300;
-  counters.forEach(el=>{
-    const target = parseInt(el.dataset.count,10) || 0;
-    let start = null;
-    function step(ts){
-      if(!start) start = ts;
-      const p = Math.min((ts - start) / duration, 1);
-      el.textContent = Math.floor(p * target);
-      if(p < 1) requestAnimationFrame(step);
-    }
-    requestAnimationFrame(step);
-  });
-})();
+      document.getElementById("theme-toggle").addEventListener("click", () => {
+        root.classList.toggle("light");
+        localStorage.setItem("theme", root.classList.contains("light") ? "light" : "dark");
+      });
+    })();
 
-// Visa mer / Visa mindre
-document.querySelectorAll('.project').forEach(card=>{
-  const btn = card.querySelector('.btn-more');
-  const body = card.querySelector('.project-body');
-  btn.addEventListener('click', ()=>{
-    const expanded = body.classList.toggle('expanded');
-    body.classList.toggle('collapsed', !expanded);
-    btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
-    btn.textContent = expanded ? 'Visa mindre' : 'Visa mer';
-  });
-});
+    (function animateCounters() {
+      const counters = document.querySelectorAll("#quickFacts strong[data-count]");
+      const duration = 500;
 
-// Bild-modal
-(function imageModal(){
-  const modal = document.getElementById('imgModal');
-  const modalImg = modal.querySelector('img');
-  const caption = modal.querySelector('.modal-caption');
-  function open(src, title){
-    modalImg.src = src;
-    caption.textContent = title || '';
-    modal.classList.add('show');
-    modal.setAttribute('aria-hidden','false');
-  }
-  function close(){
-    modal.classList.remove('show');
-    modal.setAttribute('aria-hidden','true');
-    modalImg.src = '';
-  }
-  document.querySelectorAll('.project img').forEach(img=>{
-    img.addEventListener('click', ()=> open(img.src, img.closest('.project').querySelector('h3')?.textContent));
-  });
-modal.addEventListener('click', (e) => {
-  if (!modalImg.contains(e.target)) close();
-});
-  modal.querySelector('.modal-close').addEventListener('click', close);
-  document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') close(); });
-})();
+      counters.forEach((el) => {
+        const target = parseInt(el.dataset.count, 10) || 0;
+        let start = null;
 
-// Sök + chip-filter
-(function filtering(){
-  const search = document.getElementById('search');
-  const chips = document.querySelectorAll('.chip');
-  const cards = [...document.querySelectorAll('.project')];
-  let active = 'alla';
+        function step(ts) {
+          if (!start) start = ts;
+          const progress = Math.min((ts - start) / duration, 1);
+          el.textContent = Math.floor(progress * target);
+          if (progress < 1) requestAnimationFrame(step);
+        }
 
-  function apply(){
-    const q = (search.value || '').toLowerCase();
-    cards.forEach(card=>{
-      const hay = (card.innerText + ' ' + (card.dataset.tags||'')).toLowerCase();
-      const tagOk = active === 'alla' || (card.dataset.tags||'').split(',').map(s=>s.trim()).includes(active);
-      const show = hay.includes(q) && tagOk;
-      card.style.display = show ? '' : 'none';
-    });
-  }
+        requestAnimationFrame(step);
+      });
+    })();
 
-  search.addEventListener('input', apply);
-  chips.forEach(ch=>{
-    ch.addEventListener('click', ()=>{
-      chips.forEach(c=>c.classList.remove('active'));
-      ch.classList.add('active');
-      active = ch.dataset.filter;
-      apply();
-    });
-  });
+    (function backToTop() {
+      const btn = document.getElementById("backToTop");
 
-  // genvägar
-  document.addEventListener('keydown', (e)=>{
-    if(e.key === '/' && document.activeElement !== search){ e.preventDefault(); search.focus(); }
-    if(e.key.toLowerCase() === 'g'){ document.getElementById('projects').scrollIntoView({behavior:'smooth'}); }
-    if(e.key.toLowerCase() === 't'){ document.getElementById('theme-toggle').click(); }
-  });
-})();
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 500) {
+          btn.classList.add("show");
+        } else {
+          btn.classList.remove("show");
+        }
+      });
 
-// Back-to-top
-(function backToTop(){
-  const btn = document.getElementById('backToTop');
-  window.addEventListener('scroll', ()=>{
-    if(window.scrollY > 600) btn.classList.add('show'); else btn.classList.remove('show');
-  });
-  btn.addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}));
-})();
+      btn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    })();
 
-// Kopiera e-post
-(function copyEmail(){
-  const btn = document.getElementById('copyBtn');
-  const link = document.getElementById('copyEmail');
-  if(!btn || !link) return;
-  btn.addEventListener('click', async ()=>{
-    try{
-      await navigator.clipboard.writeText(link.textContent.trim());
-      btn.textContent = 'Kopierad!';
-      setTimeout(()=> btn.textContent = 'Kopiera', 1500);
-    }catch(e){ btn.textContent = 'Misslyckades'; }
-  });
-})();
+    (function copyEmail() {
+      const btn = document.getElementById("copyBtn");
+      const link = document.getElementById("copyEmail");
+      if (!btn || !link) return;
 
+      btn.addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText(link.textContent.trim());
+          btn.textContent = "Copied!";
+          setTimeout(() => (btn.textContent = "Copy"), 1500);
+        } catch (e) {
+          btn.textContent = "Failed";
+        }
+      });
+    })();
   </script>
+
+  <script>
+  (function initTheme() {
+    const root = document.documentElement;
+    const saved = localStorage.getItem("theme");
+    if (saved === "light") root.classList.add("light");
+
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+      root.classList.toggle("light");
+      localStorage.setItem("theme", root.classList.contains("light") ? "light" : "dark");
+    });
+  })();
+
+  (function animateCounters() {
+    const counters = document.querySelectorAll("#quickFacts strong[data-count]");
+    const duration = 500;
+
+    counters.forEach((el) => {
+      const target = parseInt(el.dataset.count, 10) || 0;
+      let start = null;
+
+      function step(ts) {
+        if (!start) start = ts;
+        const progress = Math.min((ts - start) / duration, 1);
+        el.textContent = Math.floor(progress * target);
+        if (progress < 1) requestAnimationFrame(step);
+      }
+
+      requestAnimationFrame(step);
+    });
+  })();
+
+  (function backToTop() {
+    const btn = document.getElementById("backToTop");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 500) {
+        btn.classList.add("show");
+      } else {
+        btn.classList.remove("show");
+      }
+    });
+
+    btn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  })();
+
+  (function copyEmail() {
+    const btn = document.getElementById("copyBtn");
+    const link = document.getElementById("copyEmail");
+    if (!btn || !link) return;
+
+    btn.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(link.textContent.trim());
+        btn.textContent = "Copied!";
+        setTimeout(() => (btn.textContent = "Copy"), 1500);
+      } catch (e) {
+        btn.textContent = "Failed";
+      }
+    });
+  })();
+
+  (function imageModal() {
+    const modal = document.getElementById("imgModal");
+    const modalImg = modal.querySelector("img");
+    const caption = modal.querySelector(".modal-caption");
+    const closeBtn = modal.querySelector(".modal-close");
+
+    function openModal(src, title) {
+      modalImg.src = src;
+      modalImg.alt = title || "Project image";
+      caption.textContent = title || "";
+      modal.classList.add("show");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeModal() {
+      modal.classList.remove("show");
+      modal.setAttribute("aria-hidden", "true");
+      modalImg.src = "";
+      document.body.style.overflow = "";
+    }
+
+    document.querySelectorAll(".project-card img").forEach((img) => {
+      img.addEventListener("click", () => {
+        const title = img.closest(".project-card")?.querySelector("h3")?.textContent || "";
+        openModal(img.src, title);
+      });
+    });
+
+    closeBtn.addEventListener("click", closeModal);
+
+    modal.addEventListener("click", () => {
+      closeModal();
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && modal.classList.contains("show")) {
+        closeModal();
+      }
+    });
+  })();
+</script>
 </body>
 </html>
